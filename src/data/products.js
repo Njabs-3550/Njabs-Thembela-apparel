@@ -56,7 +56,7 @@ const products = [
     subcategory: "shirts",
     price: 1499,
     description: "Relaxed oversized fit. Two chest flap pockets. Full button-up front. Woven nta. tag at bottom right.",
-    coverImage: "/images/products/oversized-ls-shirt-cover.jpg",
+    coverImage: "/images/bgreen ls shirt cover.png",
     sizes: ["XS", "S", "M", "L", "XL", "2XL"],
     colors: [
       { name: "Bottle Green", hex: "#1B4D3E", image: "/images/green ls shirt.png" },
