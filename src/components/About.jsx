@@ -6,7 +6,7 @@ export default function About() {
           {/* Image */}
           <div className="relative animate-fade-in-up">
             <img
-              src="public/images/nta's workspace.png"
+              src="/images/nta's workspace.png"
               alt="nta's workspace"
               className="w-full h-[500px] lg:h-[700px] object-cover"
             />
