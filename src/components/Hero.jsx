@@ -2,12 +2,12 @@ import { useState, useEffect, useRef } from 'react';
 
 const heroImages = [
   {
-    url: "/images/hero1.png",
+    url: "public/images/hero1.png",
     alt: "Male model in earth tone streetwear",
     gender: "male"
   },
   {
-    url: "/images/hero2.png",
+    url: "public/images/hero2.png",
     alt: "Male model in earth tone streetwear",
     gender: "male"
   },
