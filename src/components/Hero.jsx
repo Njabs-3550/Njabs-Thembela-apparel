@@ -36,7 +36,23 @@ const heroImages = [
 export default function Hero() {
   const [currentImage, setCurrentImage] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
   const sectionRef = useRef(null);
+
+  // Preload images
+  useEffect(() => {
+    let loadedCount = 0;
+    heroImages.forEach((image) => {
+      const img = new Image();
+      img.src = image.url;
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === heroImages.length) {
+          setImagesLoaded(true);
+        }
+      };
+    });
+  }, []);
 
   // Auto-rotate images
   useEffect(() => {
@@ -74,9 +90,16 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen flex items-end lg:items-center overflow-hidden">
+    <section ref={sectionRef} className="relative min-h-screen flex items-end lg:items-center overflow-hidden bg-espresso">
+      {/* Loading Placeholder */}
+      {!imagesLoaded && (
+        <div className="absolute inset-0 z-10 flex items-center justify-center bg-espresso">
+          <div className="w-10 h-10 border-2 border-cream/30 border-t-cream rounded-full animate-spin"></div>
+        </div>
+      )}
+
       {/* Background Image Slideshow */}
-      <div className="absolute inset-0 z-0">
+      <div className={`absolute inset-0 z-0 transition-opacity duration-500 ${imagesLoaded ? 'opacity-100' : 'opacity-0'}`}>
         {heroImages.map((image, index) => (
           <div
             key={index}
@@ -88,6 +111,8 @@ export default function Hero() {
               src={image.url}
               alt={image.alt}
               className="w-full h-full object-cover"
+              loading={index === 0 ? "eager" : "lazy"}
+              sizes="100vw"
             />
           </div>
         ))}
