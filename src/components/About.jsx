@@ -6,8 +6,8 @@ export default function About() {
           {/* Image */}
           <div className="relative animate-fade-in-up">
             <img
-              src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=700&h=900&fit=crop&q=85"
-              alt="Atelier workspace"
+              src="public/images/nta's workspace.png"
+              alt="nta's workspace"
               className="w-full h-[500px] lg:h-[700px] object-cover"
             />
             <div className="absolute -bottom-6 -right-6 lg:-right-10 bg-cream p-8 lg:p-10 shadow-[0_20px_60px_rgba(60,36,21,0.08)]">
