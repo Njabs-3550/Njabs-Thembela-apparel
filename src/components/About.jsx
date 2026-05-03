@@ -3,6 +3,7 @@ export default function About() {
     <section id="about" className="py-24 lg:py-32 bg-cream-dark">
       <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          
           {/* Image */}
           <div className="relative animate-fade-in-up">
             <img
@@ -25,22 +26,31 @@ export default function About() {
               The Beauty<br />of Restraint
             </h2>
             <div className="w-16 h-[1px] bg-espresso/30"></div>
+            
             <div className="space-y-6 text-espresso/60 text-sm leading-relaxed max-w-lg">
               <p>
-                Njabs Thembela Apparel was founded on the belief that true luxury 
-                lies in subtlety. We create pieces that speak quietly but command 
-                attention through impeccable cut, superior fabric, and thoughtful detail.
+                Njabs Thembela Apparel was built on the idea that real presence 
+                doesn't need to be loud. Our pieces are designed to move quietly, 
+                but leave a lasting impression through silhouette, texture, and detail.
               </p>
               <p>
-                Every garment is designed with intention. We source the finest 
-                natural materials—Italian wools, Japanese cottons, pure silks—and 
-                work with master craftspeople who share our obsession with quality.
+                We focus on modern streetwear with a refined edge—where relaxed 
+                forms meet precise construction. Every garment is intentional, 
+                from the weight of the fabric to the way it falls on the body. 
+                Nothing is accidental.
               </p>
               <p>
-                This is not fashion that shouts. It is clothing for those who 
-                understand that elegance is found in the spaces between, in the 
-                perfect drape of a trouser, the weight of a coat, the way a shirt 
-                collar sits just so.
+                Our materials are carefully selected for both feel and function—structured 
+                cottons, rich denims, durable blends—chosen to age well and carry 
+                character over time. Each piece is made to be worn, lived in, and understood.
+              </p>
+              <p>
+                This is streetwear for those who appreciate restraint. For those who 
+                notice the balance in proportions, the quiet confidence in fit, and the 
+                power of simplicity done right.
+              </p>
+              <p className="text-espresso/80 font-medium tracking-wider">
+                Njabs Thembela Apparel.<br />nta.
               </p>
             </div>
             
@@ -60,6 +70,7 @@ export default function About() {
               </div>
             </div>
           </div>
+          
         </div>
       </div>
     </section>
