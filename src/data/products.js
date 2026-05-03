@@ -59,10 +59,10 @@ const products = [
     coverImage: "/images/products/oversized-ls-shirt-cover.jpg",
     sizes: ["XS", "S", "M", "L", "XL", "2XL"],
     colors: [
-      { name: "Bottle Green", hex: "#1B4D3E", image: "/images/products/oversized-ls-shirt-green.jpg" },
-      { name: "Black", hex: "#1A1A1A", image: "/images/products/oversized-ls-shirt-black.jpg" },
-      { name: "White", hex: "#FFFFFF", image: "/images/products/oversized-ls-shirt-white.jpg" },
-      { name: "Rusty Bronze", hex: "#B87333", image: "/images/products/oversized-ls-shirt-bronze.jpg" }
+      { name: "Bottle Green", hex: "#1B4D3E", image: "/images/green ls shirt.png" },
+      { name: "Black", hex: "#1A1A1A", image: "/images/black ls shirt.png" },
+      { name: "White", hex: "#FFFFFF", image: "/images/white ls shirt.png" },
+      { name: "Rusty Bronze", hex: "#B87333", image: "/images/bronze ls shirt.png" }
     ],
     featured: true
   },
