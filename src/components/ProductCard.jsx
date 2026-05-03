@@ -5,7 +5,6 @@ export default function ProductCard({ product }) {
   const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const [showColorPicker, setShowColorPicker] = useState(false);
   const { addToCart } = useCart();
 
   const selectedColor = product.colors[selectedColorIndex];
@@ -65,10 +64,7 @@ export default function ProductCard({ product }) {
           {product.colors.map((color, index) => (
             <button
               key={color.name}
-              onClick={() => {
-                setSelectedColorIndex(index);
-                setShowColorPicker(true);
-              }}
+              onClick={() => setSelectedColorIndex(index)}
               onMouseEnter={() => setSelectedColorIndex(index)}
               className={`w-7 h-7 rounded-full border-2 transition-all duration-300 relative ${
                 selectedColorIndex === index 
@@ -104,6 +100,6 @@ export default function ProductCard({ product }) {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
