@@ -2,12 +2,12 @@ import { useState, useEffect, useRef } from 'react';
 
 const heroImages = [
   {
-    url: "public/images/hero1.png",
+    url: "/images/hero1.png",
     alt: "Male model in earth tone streetwear",
     gender: "male"
   },
   {
-    url: "public/images/hero2.png",
+    url: "/images/hero2.png",
     alt: "Male model in earth tone streetwear",
     gender: "male"
   },
@@ -17,17 +17,17 @@ const heroImages = [
     gender: "female"
   },
   {
-    url: "public/images/hero4.png",
+    url: "/images/hero4.png",
     alt: "Male model in beige outfit",
     gender: "male"
   },
   {
-    url: "public/images/hero5.png",
+    url: "/images/hero5.png",
     alt: "Female model in earth tone fashion",
     gender: "female"
   },
   {
-    url: "public/images/hero6.png",
+    url: "/images/hero6.png",
     alt: "Male model in brown and cream outfit",
     gender: "male"
   }
