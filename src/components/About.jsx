@@ -13,7 +13,7 @@ export default function About() {
             />
             <div className="absolute -bottom-6 -right-6 lg:-right-10 bg-cream p-8 lg:p-10 shadow-[0_20px_60px_rgba(60,36,21,0.08)]">
               <p className="text-espresso/40 text-xs tracking-[0.3em] uppercase mb-2">Est.</p>
-              <p className="text-espresso text-5xl lg:text-6xl font-light">2020</p>
+              <p className="text-espresso text-5xl lg:text-6xl font-light">2022</p>
             </div>
           </div>
 
