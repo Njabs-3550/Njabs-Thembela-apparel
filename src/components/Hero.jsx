@@ -109,13 +109,13 @@ export default function Hero() {
         <div className="lg:w-[55%] space-y-6 lg:space-y-10">
           {/* Editorial eyebrow */}
           <p className="text-cream/80 text-xs lg:text-sm tracking-[0.4em] uppercase animate-fade-in-up">
-            Earth Form Collection — Autumn Winter 2024
+            Earth Form Collection — Autumn Winter 2026
           </p>
           
           {/* Headline */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-light text-cream leading-[0.95] animate-fade-in-up" 
               style={{ animationDelay: '0.2s' }}>
-            The Art of<br />Quiet Luxury
+            The Art of<br />Restraint
           </h1>
           
           {/* Subtext */}
