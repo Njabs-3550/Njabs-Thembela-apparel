@@ -17,17 +17,17 @@ const heroImages = [
     gender: "female"
   },
   {
-    url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1600&h=900&fit=crop&q=85",
+    url: "public/images/hero4.png",
     alt: "Male model in beige outfit",
     gender: "male"
   },
   {
-    url: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1600&h=900&fit=crop&q=85",
+    url: "public/images/hero5.png",
     alt: "Female model in earth tone fashion",
     gender: "female"
   },
   {
-    url: "https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?w=1600&h=900&fit=crop&q=85",
+    url: "public/images/hero6.png",
     alt: "Male model in brown and cream outfit",
     gender: "male"
   }
