@@ -262,7 +262,7 @@ const products = [
     subcategory: "beanies",
     price: 299,
     description: "Fine rib knit. Fold-over cuff. Premium acrylic-wool blend. Minimal branding.",
-    image: "https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=600&h=800&fit=crop&q=80",
+    image: "/images/creme beanie.png",
     alt: "Ribbed knit beanie",
     sizes: ["One Size"],
     colors: ["Brown", "Beige", "Black", "Olive"],
@@ -304,7 +304,7 @@ export const categories = [
   { 
     id: "accessories", 
     name: "Accessories",
-    image: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&h=600&fit=crop&q=80",
+    image: "/images/creme beanie.png",
     description: "Complete your look"
   }
 ];
