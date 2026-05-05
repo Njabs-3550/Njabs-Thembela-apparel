@@ -195,7 +195,7 @@ const products = [
     subcategory: "berets",
     price: 349,
     description: "Soft wool beret with classic rounded shape. Inside woven nta. tag. Clean exterior.",
-    coverImage: "/images/products/beret-cover.jpg",
+    coverImage: "/images/products/bronze beret cover.png",
     sizes: ["One Size"],
     colors: [
       { name: "Black", hex: "#1A1A1A", image: "/images/products/beret-black.jpg" },
