@@ -42,10 +42,10 @@ const products = [
     subcategory: "shirts",
     price: 1299,
     description: "Bottle green base with brown & crème check pattern. Relaxed oversized fit. Double chest pockets.",
-    coverImage: "/images/products/flannel-shirt-cover.jpg",
+    coverImage: "/images/products/white ss shirt cover.png",
     sizes: ["S", "M", "L", "XL"],
     colors: [
-      { name: "Bottle Green", hex: "#1B4D3E", image: "/images/products/flannel-shirt-green.jpg" }
+      { name: "Bottle Green", hex: "#1B4D3E", image: "/images/products/white ss shirt cover.png" }
     ],
     featured: true
   },
