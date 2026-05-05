@@ -1,98 +1,79 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import products, { categories, collectionInfo } from '../data/products';
 import ProductCard from './ProductCard';
 import { useCart } from '../context/CartContext';
 
 export default function Shop() {
   const [activeCategory, setActiveCategory] = useState('all');
-  const [activeSubcategory, setActiveSubcategory] = useState('all');
+  const [isFilterSticky, setIsFilterSticky] = useState(false);
+  const filterRef = useRef(null);
   const { notification } = useCart();
 
-  // Get subcategories based on active category
-  const getSubcategories = () => {
-    if (activeCategory === 'all') return [];
-    const categoryProducts = products.filter(p => p.category === activeCategory);
-    const subcats = [...new Set(categoryProducts.map(p => p.subcategory))];
-    return subcats;
-  };
+  const filteredProducts = activeCategory === 'all'
+    ? products
+    : products.filter(p => p.category === activeCategory);
 
-  const filteredProducts = products.filter(product => {
-    const categoryMatch = activeCategory === 'all' || product.category === activeCategory;
-    const subcategoryMatch = activeSubcategory === 'all' || 
-      getSubcategories().length === 0 || 
-      product.subcategory === activeSubcategory;
-    return categoryMatch && subcategoryMatch;
-  });
-
-  const subcategories = getSubcategories();
+  // Sticky filter detection
+  useEffect(() => {
+    const handleScroll = () => {
+      if (filterRef.current) {
+        const rect = filterRef.current.getBoundingClientRect();
+        setIsFilterSticky(rect.top <= 80);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <section id="shop" className="py-24 lg:py-32 bg-cream-dark">
-      <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
-        {/* Section Header */}
-        <div className="mb-16 lg:mb-20 text-center">
-          <p className="text-espresso/40 text-xs tracking-[0.3em] uppercase mb-4">
-            {collectionInfo.season}
-          </p>
-          <h2 className="text-3xl lg:text-5xl font-light text-espresso tracking-[0.05em] mb-4">
-            {collectionInfo.name}
-          </h2>
-          <div className="w-24 h-[1px] bg-espresso/20 mx-auto"></div>
-        </div>
+    <section id="shop" className="bg-white">
+      {/* Section Header */}
+      <div className="pt-20 pb-8 lg:pt-32 lg:pb-12 text-center px-8">
+        <p className="text-espresso/40 text-[10px] lg:text-xs tracking-[0.4em] uppercase mb-3">
+          {collectionInfo.season}
+        </p>
+        <h2 className="text-3xl lg:text-6xl font-light text-espresso tracking-[0.02em]">
+          {collectionInfo.name}
+        </h2>
+      </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
-          {categories.map(category => (
-            <button
-              key={category.id}
-              onClick={() => {
-                setActiveCategory(category.id);
-                setActiveSubcategory('all');
-              }}
-              className={`px-6 py-2.5 text-xs tracking-[0.15em] uppercase transition-all duration-300 ${
-                activeCategory === category.id
-                  ? 'bg-espresso text-cream'
-                  : 'bg-transparent text-espresso/60 hover:text-espresso border border-espresso/20 hover:border-espresso/40'
-              }`}
-            >
-              {category.name}
-            </button>
-          ))}
-        </div>
-
-        {/* Subcategory Filter (if available) */}
-        {subcategories.length > 0 && (
-          <div className="flex flex-wrap justify-center gap-2 mb-12">
-            <button
-              onClick={() => setActiveSubcategory('all')}
-              className={`px-4 py-1.5 text-[10px] tracking-[0.15em] uppercase transition-all duration-300 ${
-                activeSubcategory === 'all'
-                  ? 'bg-espresso/80 text-cream'
-                  : 'bg-transparent text-espresso/40 hover:text-espresso border border-espresso/10 hover:border-espresso/30'
-              }`}
-            >
-              All {categories.find(c => c.id === activeCategory)?.name}
-            </button>
-            {subcategories.map(sub => (
+      {/* Category Filter — Sticky */}
+      <div 
+        ref={filterRef}
+        className={`bg-white z-30 transition-all duration-300 ${
+          isFilterSticky 
+            ? 'sticky top-[72px] lg:top-[80px] shadow-[0_1px_3px_rgba(0,0,0,0.05)]' 
+            : ''
+        }`}
+      >
+        <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
+          <div className="flex overflow-x-auto gap-1 py-4 lg:py-5 scrollbar-hide">
+            {categories.map(category => (
               <button
-                key={sub}
-                onClick={() => setActiveSubcategory(sub)}
-                className={`px-4 py-1.5 text-[10px] tracking-[0.15em] uppercase transition-all duration-300 ${
-                  activeSubcategory === sub
-                    ? 'bg-espresso/80 text-cream'
-                    : 'bg-transparent text-espresso/40 hover:text-espresso border border-espresso/10 hover:border-espresso/30'
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
+                className={`flex-shrink-0 px-5 py-2.5 text-[11px] lg:text-xs tracking-[0.15em] uppercase transition-all duration-300 ${
+                  activeCategory === category.id
+                    ? 'bg-espresso text-cream'
+                    : 'text-espresso/50 hover:text-espresso hover:bg-espresso/5'
                 }`}
               >
-                {sub.replace('-', ' ')}
+                {category.name}
               </button>
             ))}
           </div>
-        )}
+        </div>
+      </div>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 lg:gap-y-24">
+      {/* Products Grid — Zara Style: Full width, large images */}
+      <div className="max-w-[1400px] mx-auto px-4 lg:px-8 pb-24 lg:pb-32">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4">
           {filteredProducts.map((product, index) => (
-            <div key={product.id} className="animate-fade-in-up" style={{ animationDelay: `${0.05 * index}s` }}>
+            <div 
+              key={product.id} 
+              className="animate-fade-in-up"
+              style={{ animationDelay: `${0.05 * index}s` }}
+            >
               <ProductCard product={product} />
             </div>
           ))}
@@ -100,15 +81,15 @@ export default function Shop() {
 
         {/* Empty State */}
         {filteredProducts.length === 0 && (
-          <div className="text-center py-20">
-            <p className="text-espresso/30 text-lg">No products found in this category</p>
+          <div className="text-center py-32">
+            <p className="text-espresso/20 text-lg tracking-wider">No products found</p>
           </div>
         )}
       </div>
 
       {/* Notification Toast */}
       {notification && (
-        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 bg-espresso text-cream px-8 py-4 text-sm tracking-wider animate-fade-in-up">
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-espresso text-cream px-8 py-3 text-xs tracking-[0.15em] uppercase animate-fade-in-up shadow-xl">
           {notification}
         </div>
       )}
