@@ -42,10 +42,10 @@ const products = [
     subcategory: "shirts",
     price: 1299,
     description: "Bottle green base with brown & crème check pattern. Relaxed oversized fit. Double chest pockets.",
-    coverImage: "/images/products/white ss shirt cover.png",
+    coverImage: "/images/products/white-ss-shirt-cover.png",
     sizes: ["S", "M", "L", "XL"],
     colors: [
-      { name: "Bottle Green", hex: "#1B4D3E", image: "/images/products/white ss shirt cover.png" }
+      { name: "Bottle Green", hex: "#1B4D3E", image: "/images/products/white-ss-shirt-cover.png" }
     ],
     featured: true
   },
@@ -56,13 +56,13 @@ const products = [
     subcategory: "shirts",
     price: 1499,
     description: "Relaxed oversized fit. Two chest flap pockets. Full button-up front. Woven nta. tag at bottom right.",
-    coverImage: "/images/products/bgreen ls shirt cover.png",
+    coverImage: "/images/products/bgreen-ls-shirt-cover.png",
     sizes: ["XS", "S", "M", "L", "XL", "2XL"],
     colors: [
-      { name: "Bottle Green", hex: "#1B4D3E", image: "/images/green ls shirt.png" },
-      { name: "Black", hex: "#1A1A1A", image: "/images/black ls shirt.png" },
-      { name: "White", hex: "#FFFFFF", image: "/images/white ls shirt.png" },
-      { name: "Rusty Bronze", hex: "#B87333", image: "/images/bronze ls shirt.png" }
+      { name: "Bottle Green", hex: "#1B4D3E", image: "/images/products/green-ls-shirt.png" },
+      { name: "Black", hex: "#1A1A1A", image: "/images/products/black-ls-shirt.png" },
+      { name: "White", hex: "#FFFFFF", image: "/images/products/white-ls-shirt.png" },
+      { name: "Rusty Bronze", hex: "#B87333", image: "/images/products/bronze-ls-shirt.png" }
     ],
     featured: true
   },
@@ -159,14 +159,14 @@ const products = [
     subcategory: "beanies",
     price: 399,
     description: "Soft rib-knit wool beanie with fold-over cuff. Finished with subtle nta. branding.",
-    coverImage: "/images/products/cover beanie cover.jpg",
+    coverImage: "/images/products/beanie-cover.png",
     sizes: ["One Size"],
     colors: [
-      { name: "Cream / Taupe Pattern", hex: "#FAF7F2", image: "/images/products/beanie-cream-taupe.jpg" },
-      { name: "Charcoal / Light Grey Pattern", hex: "#36454F", image: "/images/products/beanie-charcoal-grey.jpg" },
-      { name: "Olive / Beige Pattern", hex: "#556B2F", image: "/images/products/beanie-olive-beige.jpg" },
-      { name: "Rusty Bronze", hex: "#B87333", image: "/images/products/beanie-rusty-bronze.jpg" },
-      { name: "Black", hex: "#1A1A1A", image: "/images/products/beanie-black.jpg" }
+      { name: "Cream / Taupe Pattern", hex: "#FAF7F2", image: "/images/products/beanie-cream-taupe.png" },
+      { name: "Charcoal / Light Grey Pattern", hex: "#36454F", image: "/images/products/beanie-charcoal-grey.png" },
+      { name: "Olive / Beige Pattern", hex: "#556B2F", image: "/images/products/beanie-olive-beige.png" },
+      { name: "Rusty Bronze", hex: "#B87333", image: "/images/products/beanie-rusty-bronze.png" },
+      { name: "Black", hex: "#1A1A1A", image: "/images/products/beanie-black.png" }
     ],
     featured: false
   },
@@ -177,14 +177,14 @@ const products = [
     subcategory: "bucket-hats",
     price: 449,
     description: "Classic bucket silhouette in cotton twill. Finished with subtle nta. typewriter branding.",
-    coverImage: "/images/products/bucket hat cover.png",
+    coverImage: "/images/products/bucket-hat-cover.png",
     sizes: ["One Size"],
     colors: [
-      { name: "Black", hex: "#1A1A1A", image: "/images/products/bucket-hat-black.jpg" },
-      { name: "Beige", hex: "#E8D5C4", image: "/images/products/bucket-hat-beige.jpg" },
-      { name: "Olive Green", hex: "#556B2F", image: "/images/products/bucket-hat-olive.jpg" },
-      { name: "Navy", hex: "#1B2838", image: "/images/products/bucket-hat-navy.jpg" },
-      { name: "Brown", hex: "#8B7355", image: "/images/products/bucket-hat-brown.jpg" }
+      { name: "Black", hex: "#1A1A1A", image: "/images/products/bucket-hat-black.png" },
+      { name: "Beige", hex: "#E8D5C4", image: "/images/products/bucket-hat-beige.png" },
+      { name: "Olive Green", hex: "#556B2F", image: "/images/products/bucket-hat-olive.png" },
+      { name: "Navy", hex: "#1B2838", image: "/images/products/bucket-hat-navy.png" },
+      { name: "Brown", hex: "#8B7355", image: "/images/products/bucket-hat-brown.png" }
     ],
     featured: false
   },
@@ -198,9 +198,9 @@ const products = [
     coverImage: "/images/products/bronze-beret-cover.png",
     sizes: ["One Size"],
     colors: [
-      { name: "Black", hex: "#1A1A1A", image: "/images/products/beret-black.jpg" },
-      { name: "Bottle Green", hex: "#1B4D3E", image: "/images/products/beret-green.jpg" },
-      { name: "Rusty Bronze", hex: "#B87333", image: "/images/products/beret-bronze.jpg" }
+      { name: "Black", hex: "#1A1A1A", image: "/images/products/beret-black.png" },
+      { name: "Bottle Green", hex: "#1B4D3E", image: "/images/products/beret-green.png" },
+      { name: "Rusty Bronze", hex: "#B87333", image: "/images/products/beret-bronze.png" }
     ],
     featured: false
   }
