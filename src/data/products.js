@@ -159,7 +159,7 @@ const products = [
     subcategory: "beanies",
     price: 399,
     description: "Soft rib-knit wool beanie with fold-over cuff. Finished with subtle nta. branding.",
-    coverImage: "/images/products/beanie-cover.jpg",
+    coverImage: "/images/products/cover beanie cover.jpg",
     sizes: ["One Size"],
     colors: [
       { name: "Cream / Taupe Pattern", hex: "#FAF7F2", image: "/images/products/beanie-cream-taupe.jpg" },
@@ -177,7 +177,7 @@ const products = [
     subcategory: "bucket-hats",
     price: 449,
     description: "Classic bucket silhouette in cotton twill. Finished with subtle nta. typewriter branding.",
-    coverImage: "/images/products/bucket-hat-cover.jpg",
+    coverImage: "/images/products/bucket hat cover.png",
     sizes: ["One Size"],
     colors: [
       { name: "Black", hex: "#1A1A1A", image: "/images/products/bucket-hat-black.jpg" },
