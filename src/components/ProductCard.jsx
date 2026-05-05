@@ -12,92 +12,83 @@ export default function ProductCard({ product }) {
 
   return (
     <div 
-      className="product-card"
+      className="group cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Image Container */}
-      <div className="relative overflow-hidden mb-6 bg-cream-dark">
+      {/* Image Container — Zara uses tall portrait images */}
+      <div className="relative overflow-hidden bg-cream-dark mb-3 lg:mb-4">
         <img
           src={displayImage}
           alt={`${product.name} in ${selectedColor.name}`}
-          className="w-full h-[400px] lg:h-[500px] object-cover transition-transform duration-700 ease-out"
-          style={{ transform: isHovered ? 'scale(1.05)' : 'scale(1)' }}
+          className="w-full aspect-[3/4] object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
         
-        {/* Hover Overlay */}
-        <div className={`absolute inset-0 bg-espresso/5 transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
-        
-        {/* Category Badge */}
-        <div className="absolute top-4 left-4">
-          <span className="bg-cream/90 backdrop-blur-sm text-espresso/60 text-[10px] tracking-[0.2em] uppercase px-3 py-1">
-            {product.subcategory ? product.subcategory.replace('-', ' ') : product.category}
-          </span>
-        </div>
-
-        {/* Quick Add Button */}
-        <div className={`absolute bottom-0 left-0 right-0 p-4 transition-all duration-500 ${isHovered ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}>
+        {/* Quick Add — appears on hover, Zara style */}
+        <div className={`absolute bottom-0 left-0 right-0 transition-all duration-400 ${
+          isHovered ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
+        }`}>
           <button
             onClick={() => addToCart(product, selectedSize)}
-            className="w-full bg-espresso text-cream py-4 text-xs tracking-[0.2em] uppercase hover:bg-espresso-light transition-colors duration-300"
+            className="w-full bg-white/90 backdrop-blur-sm text-espresso py-3 lg:py-4 text-[10px] lg:text-xs tracking-[0.2em] uppercase hover:bg-white transition-colors duration-300 font-medium"
           >
             Add to Bag — R{product.price}
           </button>
+          
+          {/* Size selector inside hover */}
+          <div className="flex justify-center gap-1 py-2 bg-white/90 backdrop-blur-sm border-t border-espresso/5">
+            {product.sizes.map(size => (
+              <button
+                key={size}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedSize(size);
+                }}
+                className={`w-7 h-7 lg:w-8 lg:h-8 text-[9px] lg:text-[10px] transition-all duration-200 ${
+                  selectedSize === size
+                    ? 'bg-espresso text-cream'
+                    : 'text-espresso/40 hover:text-espresso'
+                }`}
+              >
+                {size}
+              </button>
+            ))}
+          </div>
         </div>
+
+        {/* Color indicator dots */}
+        {product.colors.length > 1 && (
+          <div className="absolute top-3 left-3 flex gap-1.5">
+            {product.colors.map((color, index) => (
+              <button
+                key={color.name}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedColorIndex(index);
+                }}
+                className={`w-3 h-3 lg:w-3.5 lg:h-3.5 rounded-full border transition-all duration-200 ${
+                  selectedColorIndex === index 
+                    ? 'border-espresso scale-125' 
+                    : 'border-white/80 hover:border-white'
+                }`}
+                style={{ backgroundColor: color.hex }}
+                title={color.name}
+              />
+            ))}
+          </div>
+        )}
       </div>
 
-      {/* Product Info */}
-      <div className="space-y-3">
-        <div>
-          <h3 className="text-espresso text-base lg:text-lg font-light">{product.name}</h3>
-          <p className="text-espresso/40 text-xs mt-1 leading-relaxed">{product.description}</p>
-        </div>
-        <span className="text-espresso/60 text-sm">R{product.price}</span>
-        
-        {/* Selected Color Label */}
-        <p className="text-espresso/40 text-[10px] tracking-wider uppercase">
-          {selectedColor.name}
-        </p>
-
-        {/* Color Swatches */}
-        <div className="flex gap-2 pt-1">
-          {product.colors.map((color, index) => (
-            <button
-              key={color.name}
-              onClick={() => setSelectedColorIndex(index)}
-              onMouseEnter={() => setSelectedColorIndex(index)}
-              className={`w-7 h-7 rounded-full border-2 transition-all duration-300 relative ${
-                selectedColorIndex === index 
-                  ? 'border-espresso scale-110' 
-                  : 'border-espresso/20 hover:border-espresso/50'
-              }`}
-              style={{ backgroundColor: color.hex }}
-              title={color.name}
-            >
-              {selectedColorIndex === index && (
-                <span className="absolute inset-0 flex items-center justify-center">
-                  <span className="w-2 h-2 bg-white rounded-full shadow-sm"></span>
-                </span>
-              )}
-            </button>
-          ))}
-        </div>
-
-        {/* Size Selection */}
-        <div className="flex gap-2 pt-1">
-          {product.sizes.map(size => (
-            <button
-              key={size}
-              onClick={() => setSelectedSize(size)}
-              className={`w-10 h-10 text-xs transition-all duration-300 ${
-                selectedSize === size
-                  ? 'bg-espresso text-cream'
-                  : 'bg-transparent text-espresso/50 hover:text-espresso border border-espresso/20 hover:border-espresso/40'
-              }`}
-            >
-              {size}
-            </button>
-          ))}
+      {/* Product Info — Zara style: minimal, just name + price */}
+      <div className="px-1">
+        <h3 className="text-espresso text-xs lg:text-sm font-light leading-snug">
+          {product.name}
+        </h3>
+        <div className="flex items-center justify-between mt-1">
+          <span className="text-espresso/50 text-xs">R{product.price}</span>
+          <span className="text-espresso/30 text-[10px] uppercase tracking-wider">
+            {selectedColor.name}
+          </span>
         </div>
       </div>
     </div>
