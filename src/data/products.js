@@ -202,9 +202,9 @@ const products = [
     coverImage: "/images/products/bronze-beret-cover.png",
     sizes: ["One Size"],
     colors: [
-      { name: "Black", hex: "#1A1A1A", image: "/images/products/beret-black.png" },
-      { name: "Bottle Green", hex: "#1B4D3E", image: "/images/products/beret-green.png" },
-      { name: "Rusty Bronze", hex: "#B87333", image: "/images/products/beret-bronze.png" }  
+      { name: "Black", hex: "#1A1A1A", image: "/images/products/black-baret.png" },
+      { name: "Bottle Green", hex: "#1B4D3E", image: "/images/products/green-beret.png" },
+      { name: "Rusty Bronze", hex: "#B87333", image: "/images/products/bronze-beret.png" }  
     ],
     featured: false
   },
