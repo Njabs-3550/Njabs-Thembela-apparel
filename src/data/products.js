@@ -81,12 +81,13 @@ const products = [
     subcategory: "jeans",
     price: 1499,
     description: "Wide-leg heavy denim. Slight stacking at bottom. Clean architectural silhouette.",
-    coverImage: "/images/products/baggy-jeans-cover.jpg",
+    coverImage: "/images/products/striped-pants.png",
     sizes: ["28", "30", "32", "34", "36"],
     colors: [
       { name: "Light Wash", hex: "#A0B4C8", image: "/images/products/light-wash-denim-jeans.png" },
       { name: "Brown", hex: "#8B7355", image: "/images/products/brown-trackpants.png" },
       { name: "Black", hex: "#1A1A1A", image: "/images/products/black-trackpants.png" },
+       { name: "Black", hex: "#1A1A1A", image: "/images/products/striped-pants.png" },
       { name: "Ink Denim", hex: "#1A2A3A", image: "/images/products/ink-denim-super-baggy.png" },
       { name: "Dark Wash", hex: "#2C3E50", image: "/images/products/dark-wash-denim-jeans.png" }
     ],
