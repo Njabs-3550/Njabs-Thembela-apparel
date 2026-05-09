@@ -37,7 +37,7 @@ const products = [
   },
   {
     id: 3,
-    name: "Bottle Green Flannel Shirt",
+    name: "short sleeve shirt",
     category: "tops",
     subcategory: "shirts",
     price: 1299,
@@ -79,8 +79,8 @@ const products = [
     sizes: ["28", "30", "32", "34", "36"],
     colors: [
       { name: "Light Wash", hex: "#A0B4C8", image: "/images/products/light-wash-denim-jeans.png" },
-      { name: "Dark Wash", hex: "#2C3E50", image: "/images/products/dark-wash-denim-jeans.png" },
-      { name: "Black", hex: "#1A1A1A", image: "/images/products/baggy-jeans-black.jpg" }
+      { name: "Dark Wash", hex: "#2C3E50", image: "/images/products/" },
+      { name: "Black", hex: "#1A1A1A", image: "/images/products/dark-wash-denim-jeans.png" }
     ],
     featured: true
   },
@@ -128,9 +128,9 @@ const products = [
     coverImage: "/images/products/denim-jacket-cover.jpg",
     sizes: ["S", "M", "L", "XL"],
     colors: [
-      { name: "Indigo", hex: "#3C5A7D", image: "/images/products/denim-jacket-indigo.jpg" },
+      { name: "Indigo", hex: "#3C5A7D", image: "/images/products/" },
       { name: "Black", hex: "#1A1A1A", image: "/images/products/denim-jacket-black.jpg" },
-      { name: "Light Wash", hex: "#A0B4C8", image: "/images/products/denim-jacket-light.jpg" }
+      { name: "Light Wash", hex: "#A0B4C8", image: "/images/products/light-wash-denim-jacket.png" }
     ],
     featured: true
   },
