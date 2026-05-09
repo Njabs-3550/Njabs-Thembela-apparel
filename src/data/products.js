@@ -202,6 +202,32 @@ const products = [
       { name: "Black", hex: "#1A1A1A", image: "/images/products/beret-black.png" },
       { name: "Bottle Green", hex: "#1B4D3E", image: "/images/products/beret-green.png" },
       { name: "Rusty Bronze", hex: "#B87333", image: "/images/products/beret-bronze.png" }
+      
+    ],
+    featured: false
+  }
+    {
+    id: 13,
+    name: "Structured Cap",
+    category: "accessories",
+    subcategory: "caps",
+    price: 399,
+    description: "6-panel structured cap with embroidered nta. branding. Adjustable strap back. Curved brim.",
+    coverImage: "/images/products/cap-cover.png",
+    sizes: ["One Size"],
+    colors: [
+      { name: "Black", hex: "#1A1A1A", image: "/images/products/cap1.png" },
+      { name: "Beige", hex: "#E8D5C4", image: "/images/products/cap2.png" },
+      { name: "Olive Green", hex: "#556B2F", image: "/images/products/cap3.png" },
+      { name: "Brown", hex: "#8B7355", image: "/images/products/cap4.png" },
+      { name: "Navy", hex: "#1B2838", image: "/images/products/cap5.png" },
+      { name: "Crème White", hex: "#FAF7F2", image: "/images/products/cap6.png" },
+      { name: "Rusty Bronze", hex: "#B87333", image: "/images/products/cap7.png" },
+      { name: "Charcoal", hex: "#36454F", image: "/images/products/cap8.png" },
+      { name: "Mustard", hex: "#DAA520", image: "/images/products/cap9.png" },
+      { name: "Bottle Green", hex: "#1B4D3E", image: "/images/products/cap10.png" },
+      { name: "Sand", hex: "#C2B280", image: "/images/products/cap11.png" },
+      { name: "Burgundy", hex: "#722F37", image: "/images/products/cap12.png" }
     ],
     featured: false
   }
@@ -225,6 +251,12 @@ export const categories = [
     name: "Trousers",
     image: "/images/categories/trousers.jpg",
     description: "Baggy fits with architectural lines"
+  },
+  { 
+    id: "caps", 
+    name: "Caps",
+    image: "/images/categories/caps.jpg",
+    description: "Structured 6-panel caps"
   },
   { 
     id: "outerwear", 
