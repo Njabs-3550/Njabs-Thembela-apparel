@@ -137,7 +137,7 @@ const products = [
     coverImage: "/images/products/military-ss-jacket.png",
     sizes: ["S", "M", "L", "XL"],
     colors: [
-      { name: "Military Green", hex: "#556B2F", image: "/images/products/military-ss-jacket.png" },
+      { name: "Military Green", hex: "#556B2F", image: "/images/products/black-windbreaker.png" },
       { name: "Brown", hex: "#8B7355", image: "/images/products/brown-windbreaker.png" },
       { name: "White", hex: "#FFFFFF", image: "/images/products/white-windbreaker.png" }
     ],
@@ -155,6 +155,7 @@ const products = [
     colors: [
       { name: "Brown Coat", hex: "#8B7355", image: "/images/products/brown-coat.png" },
       { name: "Brown", hex: "#8B7355", image: "/images/products/brown-hoodie.png" },
+      { name: "Brown", hex: "#8B7355", image: "/images/products/military-ss-jacket.png" },
       { name: "Mustard + Navy", hex: "#DAA520", image: "/images/products/hoodie-mustard-navy.jpg" }
     ],
     featured: true
