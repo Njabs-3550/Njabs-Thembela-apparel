@@ -16,7 +16,7 @@ const products = [
       { name: "Crème White", hex: "#FAF7F2", image: "/images/products/oversized-tee-creme.jpg" },
       { name: "Mustard", hex: "#DAA520", image: "/images/products/oversized-tee-mustard.jpg" },
       { name: "Black", hex: "#1A1A1A", image: "/images/products/oversized-tee-black.jpg" },
-      { name: "White", hex: "#FFFFFF", image: "/images/products/oversized-tee-white.jpg" }
+      { name: "White", hex: "#FFFFFF", image: "/images/products/white-ss-t.shirt.png" }
     ],
     featured: true
   },
@@ -45,7 +45,10 @@ const products = [
     coverImage: "/images/products/white-ss-shirt-cover.png",
     sizes: ["S", "M", "L", "XL"],
     colors: [
-      { name: "Bottle Green", hex: "#1B4D3E", image: "/images/products/white-ss-shirt-cover.png" }
+      { name: "Bottle Green", hex: "#1B4D3E", image: "/images/products/navy-ss-shirt.png" }
+      { name: "Bottle Green", hex: "#1B4D3E", image: "/images/products/creme-ss-shirt.png" }
+      { name: "Bottle Green", hex: "#1B4D3E", image: "/images/products/black-ss-shirt.png" }
+      { name: "Bottle Green", hex: "#1B4D3E", image: "/images/products/creme-ss-shirt.png" }
     ],
     featured: true
   },
