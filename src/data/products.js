@@ -7,7 +7,7 @@ const products = [
     subcategory: "t-shirts",
     price: 699,
     description: "Heavy oversized fit with dropped shoulders. 280gsm cotton. Thick rib collar. Minimal branding.",
-    coverImage: "/images/products/oversized-tee-cover.jpg",
+    coverImage: "/images/products/beige-t.shirt.png",
     sizes: ["S", "M", "L", "XL"],
     colors: [
       { name: "Brown", hex: "#8B7355", image: "/images/products/oversized-tee-brown.jpg" },
