@@ -134,8 +134,8 @@ const products = [
     sizes: ["S", "M", "L", "XL"],
     colors: [
       { name: "Indigo", hex: "#3C5A7D", image: "/images/products/military-ss-jacket.png" },
-      { name: "Black", hex: "#1A1A1A", image: "/images/products/denim-jacket-black.jpg" },
-      { name: "Light Wash", hex: "#A0B4C8", image: "/images/products/light-wash-denim-jacket.png" }
+      { name: "Black", hex: "#1A1A1A", image: "/images/products/brown-windbreaker.png" },
+      { name: "Black", hex: "#1A1A1A", image: "/images/products/white-windbreaker.png" },
     ],
     featured: true
   },
