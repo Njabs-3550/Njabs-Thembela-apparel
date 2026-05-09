@@ -82,7 +82,9 @@ const products = [
     sizes: ["28", "30", "32", "34", "36"],
     colors: [
       { name: "Light Wash", hex: "#A0B4C8", image: "/images/products/light-wash-denim-jeans.png" },
-      { name: "Dark Wash", hex: "#2C3E50", image: "/images/products/" },
+      { name: "Dark Wash", hex: "#2C3E50", image: "/images/products/brown-trackpants.png" }
+      { name: "Dark Wash", hex: "#2C3E50", image: "/images/products/black-trackpants.png" }
+      { name: "Dark Wash", hex: "#2C3E50", image: "/images/products/ink-denim-super-baggy.png" },
       { name: "Black", hex: "#1A1A1A", image: "/images/products/dark-wash-denim-jeans.png" }
     ],
     featured: true
@@ -94,7 +96,7 @@ const products = [
     subcategory: "chinos",
     price: 1199,
     description: "Clean tailored loose fit. Premium cotton twill. Earth tone palette.",
-    coverImage: "/images/products/baggy-chinos-cover.jpg",
+    coverImage: "/images/products/black-baggy-formal-pants.png",
     sizes: ["28", "30", "32", "34", "36"],
     colors: [
       { name: "Beige", hex: "#E8D5C4", image: "/images/products/baggy-chinos-beige.jpg" },
@@ -147,8 +149,8 @@ const products = [
     coverImage: "/images/products/color-block-hoodie-cover.jpg",
     sizes: ["S", "M", "L", "XL"],
     colors: [
-      { name: "Beige + Olive", hex: "#E8D5C4", image: "/images/products/hoodie-beige-olive.jpg" },
-      { name: "Brown + Crème", hex: "#8B7355", image: "/images/products/hoodie-brown-creme.jpg" },
+      { name: "Beige + Olive", hex: "#E8D5C4", image: "/images/products/brown-coat.png" },
+      { name: "Brown + Crème", hex: "#8B7355", image: "/images/products/brown-hoodie.png" },
       { name: "Mustard + Navy", hex: "#DAA520", image: "/images/products/hoodie-mustard-navy.jpg" }
     ],
     featured: true
