@@ -201,12 +201,11 @@ const products = [
     colors: [
       { name: "Black", hex: "#1A1A1A", image: "/images/products/beret-black.png" },
       { name: "Bottle Green", hex: "#1B4D3E", image: "/images/products/beret-green.png" },
-      { name: "Rusty Bronze", hex: "#B87333", image: "/images/products/beret-bronze.png" }
-      
+      { name: "Rusty Bronze", hex: "#B87333", image: "/images/products/beret-bronze.png" }  
     ],
     featured: false
-  }
-    {
+  },
+  {
     id: 13,
     name: "Structured Cap",
     category: "accessories",
