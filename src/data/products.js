@@ -243,7 +243,7 @@ export const categories = [
 export const collectionInfo = {
   name: "EARTH FORM COLLECTION",
   description: "A clean, architectural, earth-tone luxury streetwear collection. Minimal branding. Maximum intention.",
-  season: "Autumn/Winter 2024"
+  season: "Autumn/Winter 2026"
 };
 
 export default products;
