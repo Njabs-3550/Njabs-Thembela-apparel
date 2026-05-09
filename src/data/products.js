@@ -27,7 +27,7 @@ const products = [
     subcategory: "polos",
     price: 899,
     description: "Loose saggy fit. Extended sleeves. Soft structured collar. Slight drop hem.",
-    coverImage: "/images/products/green&white-golfer.pn",
+    coverImage: "/images/products/green&white-golfer.png",
     sizes: ["S", "M", "L", "XL"],
     colors: [
       { name: "Navy", hex: "#1B2838", image: "/images/products/bgreen-golfer.png" },
