@@ -30,8 +30,8 @@ const products = [
     coverImage: "/images/products/green&white-golfer.png",
     sizes: ["S", "M", "L", "XL"],
     colors: [
-      { name: "Navy", hex: "#1B2838", image: "/images/products/saggy-polo-navy.jpg" },
-      { name: "Mustard", hex: "#DAA520", image: "/images/products/saggy-polo-mustard.jpg" }
+      { name: "Navy", hex: "#1B2838", image: "/images/products/bgreen-golfer.png" },
+      { name: "Mustard", hex: "#DAA520", image: "/images/products/mustard-golfer.png" }
     ],
     featured: true
   },
@@ -78,8 +78,8 @@ const products = [
     coverImage: "/images/products/baggy-jeans-cover.jpg",
     sizes: ["28", "30", "32", "34", "36"],
     colors: [
-      { name: "Light Wash", hex: "#A0B4C8", image: "/images/products/baggy-jeans-light.jpg" },
-      { name: "Dark Wash", hex: "#2C3E50", image: "/images/products/baggy-jeans-dark.jpg" },
+      { name: "Light Wash", hex: "#A0B4C8", image: "/images/products/light-wash-denim-jeans.png" },
+      { name: "Dark Wash", hex: "#2C3E50", image: "/images/products/dark-wash-denim-jeans.png" },
       { name: "Black", hex: "#1A1A1A", image: "/images/products/baggy-jeans-black.jpg" }
     ],
     featured: true
