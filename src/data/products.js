@@ -115,7 +115,7 @@ const products = [
     coverImage: "/images/products/cargo-pants-cover.jpg",
     sizes: ["28", "30", "32", "34", "36"],
     colors: [
-      { name: "Olive", hex: "#556B2F", image: "/images/products/cargo-pants-olive.jpg" },
+      { name: "Olive", hex: "#556B2F", image: "/images/products/military-cargopants.png" },
       { name: "Brown", hex: "#8B7355", image: "/images/products/cargo-pants-brown.jpg" },
       { name: "Black", hex: "#1A1A1A", image: "/images/products/cargo-pants-black.jpg" }
     ],
@@ -133,7 +133,7 @@ const products = [
     coverImage: "/images/products/denim-jacket-cover.jpg",
     sizes: ["S", "M", "L", "XL"],
     colors: [
-      { name: "Indigo", hex: "#3C5A7D", image: "/images/products/" },
+      { name: "Indigo", hex: "#3C5A7D", image: "/images/products/military-ss-jacket.png" },
       { name: "Black", hex: "#1A1A1A", image: "/images/products/denim-jacket-black.jpg" },
       { name: "Light Wash", hex: "#A0B4C8", image: "/images/products/light-wash-denim-jacket.png" }
     ],
