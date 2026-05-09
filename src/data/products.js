@@ -31,6 +31,9 @@ const products = [
     sizes: ["S", "M", "L", "XL"],
     colors: [
       { name: "Navy", hex: "#1B2838", image: "/images/products/bgreen-golfer.png" },
+      { name: "Navy", hex: "#1B2838", image: "/images/products/avocado-golfer.png" },
+      { name: "Navy", hex: "#1B2838", image: "/images/products/brown-golfer.png" },
+      { name: "Navy", hex: "#1B2838", image: "/images/products/green&white-golfer.png" },
       { name: "Mustard", hex: "#DAA520", image: "/images/products/mustard-golfer.png" }
     ],
     featured: true
