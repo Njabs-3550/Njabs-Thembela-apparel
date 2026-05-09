@@ -1,14 +1,26 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useCart } from '../context/CartContext';
 
 export default function ProductCard({ product }) {
   const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [loadedImages, setLoadedImages] = useState({});
   const { addToCart } = useCart();
 
   const selectedColor = product.colors[selectedColorIndex];
   const displayImage = selectedColor.image || product.coverImage;
+
+  // Preload all color images when product card mounts
+  useEffect(() => {
+    product.colors.forEach((color, index) => {
+      const img = new Image();
+      img.src = color.image || product.coverImage;
+      img.onload = () => {
+        setLoadedImages(prev => ({ ...prev, [index]: true }));
+      };
+    });
+  }, [product]);
 
   return (
     <div 
@@ -16,16 +28,42 @@ export default function ProductCard({ product }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Image Container — Zara uses tall portrait images */}
+      {/* Image Container */}
       <div className="relative overflow-hidden bg-cream-dark mb-3 lg:mb-4">
-        <img
-          src={displayImage}
-          alt={`${product.name} in ${selectedColor.name}`}
-          className="w-full aspect-[3/4] object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-        />
+        {/* Show all images, hide/show based on selection */}
+        {product.colors.map((color, index) => (
+          <img
+            key={color.name}
+            src={color.image || product.coverImage}
+            alt={`${product.name} in ${color.name}`}
+            className={`w-full aspect-[3/4] object-cover transition-opacity duration-300 absolute inset-0 ${
+              index === selectedColorIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+            }`}
+          />
+        ))}
         
-        {/* Quick Add — appears on hover, Zara style */}
-        <div className={`absolute bottom-0 left-0 right-0 transition-all duration-400 ${
+        {/* Placeholder to maintain aspect ratio while images load */}
+        <div className="w-full aspect-[3/4]"></div>
+        
+        {/* Loading indicator for current image */}
+        {!loadedImages[selectedColorIndex] && (
+          <div className="absolute inset-0 flex items-center justify-center bg-cream-dark z-20">
+            <div className="w-6 h-6 border-2 border-espresso/20 border-t-espresso rounded-full animate-spin"></div>
+          </div>
+        )}
+
+        {/* Hover Overlay */}
+        <div className={`absolute inset-0 bg-espresso/5 transition-opacity duration-500 z-20 ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
+        
+        {/* Category Badge */}
+        <div className="absolute top-4 left-4 z-20">
+          <span className="bg-cream/90 backdrop-blur-sm text-espresso/60 text-[10px] tracking-[0.2em] uppercase px-3 py-1">
+            {product.subcategory ? product.subcategory.replace('-', ' ') : product.category}
+          </span>
+        </div>
+
+        {/* Quick Add Button */}
+        <div className={`absolute bottom-0 left-0 right-0 z-20 transition-all duration-400 ${
           isHovered ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
         }`}>
           <button
@@ -58,7 +96,7 @@ export default function ProductCard({ product }) {
 
         {/* Color indicator dots */}
         {product.colors.length > 1 && (
-          <div className="absolute top-3 left-3 flex gap-1.5">
+          <div className="absolute top-3 left-3 z-20 flex gap-1.5">
             {product.colors.map((color, index) => (
               <button
                 key={color.name}
@@ -68,7 +106,7 @@ export default function ProductCard({ product }) {
                 }}
                 className={`w-3 h-3 lg:w-3.5 lg:h-3.5 rounded-full border transition-all duration-200 ${
                   selectedColorIndex === index 
-                    ? 'border-espresso scale-125' 
+                    ? 'border-espresso scale-125 ring-1 ring-espresso/30' 
                     : 'border-white/80 hover:border-white'
                 }`}
                 style={{ backgroundColor: color.hex }}
@@ -79,7 +117,7 @@ export default function ProductCard({ product }) {
         )}
       </div>
 
-      {/* Product Info — Zara style: minimal, just name + price */}
+      {/* Product Info */}
       <div className="px-1">
         <h3 className="text-espresso text-xs lg:text-sm font-light leading-snug">
           {product.name}
