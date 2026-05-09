@@ -159,14 +159,15 @@ const products = [
     subcategory: "beanies",
     price: 399,
     description: "Soft rib-knit wool beanie with fold-over cuff. Finished with subtle nta. branding.",
-    coverImage: "/images/products/beanie-cover.png",
+    coverImage: "/images/products/cover-beanie-cover.png",
     sizes: ["One Size"],
     colors: [
-      { name: "Cream / Taupe Pattern", hex: "#FAF7F2", image: "/images/products/beanie-cream-taupe.png" },
-      { name: "Charcoal / Light Grey Pattern", hex: "#36454F", image: "/images/products/beanie-charcoal-grey.png" },
-      { name: "Olive / Beige Pattern", hex: "#556B2F", image: "/images/products/beanie-olive-beige.png" },
-      { name: "Rusty Bronze", hex: "#B87333", image: "/images/products/beanie-rusty-bronze.png" },
-      { name: "Black", hex: "#1A1A1A", image: "/images/products/beanie-black.png" }
+      { name: "Cream / Taupe Pattern", hex: "#FAF7F2", image: "/images/products/creme-beanie.png" },
+      { name: "Charcoal / Light Grey Pattern", hex: "#36454F", image: "/images/products/black-beanie1.png" },
+      { name: "Olive / Beige Pattern", hex: "#556B2F", image: "/images/products/avocado-beanie1.png" },
+      { name: "Olive / Beige Pattern", hex: "#556B2F", image: "/images/products/avocado-beanie2.png" },
+      { name: "Rusty Bronze", hex: "#B87333", image: "/images/products/bronze-beanie.png" },
+      { name: "Black", hex: "#1A1A1A", image: "/images/products/black-beanie.png" }
     ],
     featured: false
   },
@@ -180,11 +181,11 @@ const products = [
     coverImage: "/images/products/bucket-hat-cover.png",
     sizes: ["One Size"],
     colors: [
-      { name: "Black", hex: "#1A1A1A", image: "/images/products/bucket-hat-black.png" },
-      { name: "Beige", hex: "#E8D5C4", image: "/images/products/bucket-hat-beige.png" },
+      { name: "Black", hex: "#1A1A1A", image: "/images/products/black-bucket-hat.png" },
+      { name: "Beige", hex: "#E8D5C4", image: "/images/products/white-bucket-hat.png" },
       { name: "Olive Green", hex: "#556B2F", image: "/images/products/bucket-hat-olive.png" },
-      { name: "Navy", hex: "#1B2838", image: "/images/products/bucket-hat-navy.png" },
-      { name: "Brown", hex: "#8B7355", image: "/images/products/bucket-hat-brown.png" }
+      { name: "Navy", hex: "#1B2838", image: "/images/products/navy-bucket-hat.png" },
+      { name: "Brown", hex: "#8B7355", image: "/images/products/bronze-bucket-hat.png" }
     ],
     featured: false
   },
